@@ -11,7 +11,6 @@ mongoose.connect(process.env.MONGO_URL, {
     password: 'fYzgID9ajNNj3K3j',
   },
   useNewUrlParser: true,
-  useFindAndModify: false,
 });
 mongoose.connection.once('open', () => {
   console.log('Connected to Database');
