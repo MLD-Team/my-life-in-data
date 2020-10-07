@@ -20,3 +20,5 @@ dist/
 
 # macOS meta
 .DS_Store
+
+.env
