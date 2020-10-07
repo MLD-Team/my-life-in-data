@@ -1,6 +1,6 @@
-const User = require('../models/User');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
+const User = require('../models/User');
 
 const { filterProperties, removeProperties } = require('../utils');
 const {
@@ -83,6 +83,7 @@ authController.authenticate = async (req, res, next) => {
     const token = authHeader.split(' ')[1]; // it looks like this: 'Bearer: <tokenWillBeHere>'
 
     const payload = jwt.verify(token, 'secret');
+    console.log(`Payload: ${payload}\nToken: ${token}`);
     req.user = payload.user;
     next();
   } catch (err) {
