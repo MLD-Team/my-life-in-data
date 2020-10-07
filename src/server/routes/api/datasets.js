@@ -13,12 +13,14 @@ router
   .get(dataSetController.getOne)
   .delete(dataSetController.delete);
 
+// S
 router
   .route('/:dataset/points$')
   .post(pointController.create)
   .get(pointController.getAll)
   .delete(pointController.deleteAll);
 
+// A
 router
   .route('/:dataset/points/:point')
   .put(pointController.update)
