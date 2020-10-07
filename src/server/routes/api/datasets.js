@@ -4,8 +4,8 @@ const dataSetController = require('../../controllers/dataset');
 const pointController = require('../../controllers/point');
 
 /* /api/datasets */
-router.post('', dataSetController.create);
-router.get('', dataSetController.getAll);
+router.post('/', dataSetController.create);
+router.get('/', dataSetController.getAll);
 
 router
   .route('/:dataset$')

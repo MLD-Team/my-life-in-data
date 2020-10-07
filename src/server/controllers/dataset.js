@@ -52,15 +52,16 @@ dataSetController.update = async (req, res, next) => {
   }
 };
 
-dataSetController.getAll = async (req, res, next) => {
+dataSetController.getAll = async (req, res) => {
   try {
-    const dataSets = await DataSet.find({ owner: req.user._id }).exec();
+    const dataSets = await DataSet.find({}).exec();
+    // console.log(dataSets);
     res.status(200).json(dataSets);
   } catch (err) {
-    next({
-      log: `⚠️ [ERROR] dataSetController.getAll - ${err}`,
-      message: { error: "Some shit went down I'm sorry." },
-    });
+    // next({
+    //   log: `⚠️ [ERROR] dataSetController.getAll - ${err}`,
+    //   message: { error: "Some shit went down I'm sorry." },
+    // });
   }
 };
 

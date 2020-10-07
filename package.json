@@ -2,6 +2,9 @@
   "name": "my-life-in-data",
   "version": "1.0.0",
   "description": "",
+  "jest": {
+    "testEnvironment": "node"
+  },
   "scripts": {
     "test": "jest",
     "test:watch": "jest --watch",
